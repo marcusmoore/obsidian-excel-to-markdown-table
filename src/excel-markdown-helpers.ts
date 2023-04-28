@@ -13,7 +13,7 @@ const UNESCAPED_DOUBLE_QUOTE = '"';
 // UNI_PARAGRAPH_SEPARATOR = `\u2029`
 const EXCEL_ROW_DELIMITER_REGEX = /[\n\u0085\u2028\u2029]|\r\n?/g
 const COLUMN_ALIGNMENT_REGEX = /^(\^[lcr])/i;
-const EXCEL_NEWLINE_ESCAPED_CELL_REGEX = /"([^\t]*(?<=[^\r])\n[^\t]*)"/g;
+const EXCEL_NEWLINE_ESCAPED_CELL_REGEX = /"([^\t]*(?!\r)\n[^\t]*)"/g;
 const EXCEL_NEWLINE_REGEX = /\n/g;
 const EXCEL_DOUBLE_QUOTE_ESCAPED_REGEX = /""/g;
 
